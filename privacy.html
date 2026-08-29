@@ -2,101 +2,261 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WeMap – Privacy Policy</title>
+  <title>WeMap – Privacy Policy & Features</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      background-color: #f9f9f9;
-      color: #333;
+    :root {
+      --primary: #2c3e50;
+      --accent: #2e7d32;
+      --bg-color: #f4f7f6;
+      --card-bg: #ffffff;
+      --text-main: #333333;
+      --text-muted: #666666;
     }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
     .header-container {
       display: flex;
       align-items: center;
       gap: 15px;
-      border-bottom: 2px solid #2c3e50;
-      padding-bottom: 10px;
+      border-bottom: 2px solid #eef2f5;
+      padding-bottom: 20px;
       margin-bottom: 20px;
     }
+
     .app-logo {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
       object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     h1 {
-      color: #2c3e50;
+      color: var(--primary);
       margin: 0;
-      border-bottom: none;
-      padding-bottom: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
     }
+
     h2 {
-      color: #2c3e50;
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin-top: 30px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 4px;
     }
-    section {
-      margin-bottom: 20px;
+
+    .meta-date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 30px;
     }
+
+    /* Animation Hero Banner */
+    .animation-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 35px;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .feature-card {
+      background: #fafafa;
+      border: 1px solid #eaeaea;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      color: var(--accent);
+      font-size: 1.05rem;
+    }
+
+    .feature-card p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
     footer {
-      margin-top: 40px;
+      margin-top: 50px;
+      text-align: center;
       font-size: 0.9em;
-      color: #555;
+      color: var(--text-muted);
+      border-top: 1px solid #eef2f5;
+      padding-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header class="header-container">
-    <!-- Make sure the image filename matches your stored file path -->
-    <img src="logo.png" alt="WeMap Logo" class="app-logo">
-    <h1>WeMap – Privacy Policy</h1>
-  </header>
+  <div class="container">
+    <header class="header-container">
+      <img src="logo.png" alt="WeMap Logo" class="app-logo">
+      <h1>WeMap</h1>
+    </header>
 
-  <p><strong>Last updated:</strong> August 05, 2026</p>
+    <div class="meta-date"><strong>Last updated:</strong> August 05, 2026</div>
 
-  <section>
-    <h2>1. Introduction</h2>
-    <p>WeMap respects your privacy. This Privacy Policy explains how the app handles your data.</p>
-  </section>
+    <div class="animation-hero">
+      <dotlottie-player 
+        src="https://assets-v2.lottiefiles.com/a/9076d330-1172-11ee-8557-79cb8a9fdfc4/fH9E7tO4v5.lottie" 
+        background="transparent" 
+        speed="1" 
+        style="width: 240px; height: 240px;" 
+        loop 
+        autoplay>
+      </dotlottie-player>
+      <p style="margin: 5px 0 0 0; font-weight: 600; color: #1b5e20;">Next-Gen Navigation & Geology Toolkit</p>
+    </div>
 
-  <section>
-    <h2>2. Data Collection</h2>
-    <p>WeMap does not collect any personally identifiable information from users.</p>
-    <ul>
-      <li><strong>Location Data:</strong> Used only within the app to show your position on the map and calculate distances/bearings. Location data is never stored on our servers or shared with third parties.</li>
-      <li><strong>Imported Files:</strong> Any KML/KMZ files you import and any edits you make are saved locally on your device. They are not uploaded or transmitted outside your phone.</li>
-    </ul>
-  </section>
+    <section>
+      <h2>App Features & Overview</h2>
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <h3>📍 Waypoints & Polylines</h3>
+          <p>Edit, save, and share individual or collective waypoints and polylines with total ease.</p>
+        </div>
 
-  <section>
-    <h2>3. Data Sharing</h2>
-    <p>WeMap does not share your data with any third parties. All data stays on your device unless you choose to export and share it yourself.</p>
-  </section>
+        <div class="feature-card">
+          <h3>🗺️ Multiple Map Formats</h3>
+          <p>Switch seamlessly between satellite, terrain, and customized map views to suit your exploration needs.</p>
+        </div>
 
-  <section>
-    <h2>4. Third‑Party Services</h2>
-    <p>WeMap uses Google Maps SDK for displaying maps. Google may collect anonymized usage data in accordance with their Privacy Policy.</p>
-  </section>
+        <div class="feature-card">
+          <h3>🌐 KML/KMZ Compatibility</h3>
+          <p>Import, edit, and share KML/KMZ files. Fully compatible with Google Earth and desktop GIS software.</p>
+        </div>
 
-  <section>
-    <h2>5. Data Security</h2>
-    <p>Since all user data is stored locally on your device, security is handled by the operating system (Android). WeMap does not transmit or store your data externally.</p>
-  </section>
+        <div class="feature-card">
+          <h3>🪨 Geology Toolkit</h3>
+          <p>Measure strike and dip of formations directly in-app with precise location, altitude, and CSV export (no physical Brunton compass required).</p>
+        </div>
 
-  <section>
-    <h2>6. Your Choices</h2>
-    <p>You may delete imported files or uninstall the app at any time to remove all stored data.</p>
-  </section>
+        <div class="feature-card">
+          <h3>🗂️ Waypoint Management</h3>
+          <p>Auto-segregated lists, live distance and bearing calculations, drag-to-reorder, coordinate search, and zoom/share/delete options.</p>
+        </div>
 
-  <section>
-    <h2>7. Contact Us</h2>
-    <p>If you have questions about this Privacy Policy, please contact us at: <strong>we.explore@zohomail.in</strong></p>
-  </section>
+        <div class="feature-card">
+          <h3>📸 Geotagged Photos</h3>
+          <p>Capture photos with date/time/location metadata and dynamic Apple Maps QR codes.</p>
+          <span class="badge">Android Enhancements</span>
+          <p style="font-size: 0.85rem; margin-top: 6px;">Toggle minimap, show/hide QR code, and control UI panel opacity.</p>
+        </div>
 
-  <footer>
-    <p>© 2026 WeMap. All rights reserved.</p>
-  </footer>
+      </div>
+    </section>
+
+    <section>
+      <h2>Privacy Policy</h2>
+      
+      <h3>1. Introduction</h3>
+      <p>WeMap respects your privacy. This section explains how the app handles your data safely on your device.</p>
+
+      <h3>2. Data Collection</h3>
+      <p>WeMap does not collect any personally identifiable information from users.</p>
+      <ul>
+        <li><strong>Location Data:</strong> Used strictly in real-time to render position, distances, and bearings. Location data is never stored on external servers or shared with third parties.</li>
+        <li><strong>Imported Files:</strong> All imported KML/KMZ files, edits, and recorded data remain locally on your device.</li>
+      </ul>
+
+      <h3>3. Data Sharing</h3>
+      <p>WeMap does not sell or share data with third parties. All records stay under your local control unless you explicitly choose to export or share them.</p>
+
+      <h3>4. Third‑Party Services</h3>
+      <p>WeMap utilizes the Google Maps SDK for map display rendering. Google may collect anonymized service diagnostics in accordance with their privacy policies.</p>
+
+      <h3>5. Data Security</h3>
+      <p>Because all data remains local, device-level security (Android OS encryption and permissions) handles safety. No cloud transmission occurs automatically.</p>
+
+      <h3>6. Your Choices & Controls</h3>
+      <p>You can remove cached files within the app or uninstall WeMap anytime to instantly delete all associated local storage.</p>
+    </section>
+
+    <section>
+      <h2>Feedback & Contact Us</h2>
+      <p>We welcome your input! You can share feedback directly within the app's Feedback Integration module or reach out via email:</p>
+      <p>📧 Email: <strong>we.explore@zohomail.in</strong></p>
+    </section>
+
+    <footer>
+      <p>© 2026 WeMap. All rights reserved.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
