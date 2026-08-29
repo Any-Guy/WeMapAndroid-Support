@@ -12,12 +12,28 @@
       background-color: #f9f9f9;
       color: #333;
     }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    h1 {
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
       border-bottom: 2px solid #2c3e50;
       padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .app-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+    h1 {
+      color: #2c3e50;
+      margin: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    h2 {
+      color: #2c3e50;
     }
     section {
       margin-bottom: 20px;
@@ -30,7 +46,13 @@
   </style>
 </head>
 <body>
-  <h1>WeMap – Privacy Policy</h1>
+
+  <header class="header-container">
+    <!-- Make sure the image filename matches your stored file path -->
+    <img src="wemap logo.png" alt="WeMap Logo" class="app-logo">
+    <h1>WeMap – Privacy Policy</h1>
+  </header>
+
   <p><strong>Last updated:</strong> August 05, 2026</p>
 
   <section>
@@ -75,5 +97,6 @@
   <footer>
     <p>© 2026 WeMap. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
